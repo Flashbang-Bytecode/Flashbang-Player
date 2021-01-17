@@ -11,6 +11,7 @@ def split_every(n, iterable):
         piece = list(islice(i, n))
 if len(sys.argv) != 1:
     print('You have to drag the file onto the player first...')
+    exit(1)
 with open(sys.argv[1],'rb') as f:
     print('Bytecode opened. Now Preparing...')
     hexdata = binascii.hexlify(f.read())
